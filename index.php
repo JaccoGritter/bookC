@@ -31,10 +31,44 @@
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
             <h2 class="text-center"><i class="fas fa-book"></i><a href="main.php">&nbsp;bookC</a></h2><br>
-            <h4 class="text-center">Log In</h4>
+            <h4 class="text-center"><a data-toggle="modal" href="#login">Log In</a></h4>
             <h5 class="text-center">Create Account</h5>
         </div>
     </div>
+
+    <!-- The Modal -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Vul je naam en wachtwoord in:</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" class="form-control" id="titel">
+            </div>
+            <div class="form-group">
+                <label for="wachtwoord">Wachtwoord</label>
+                <input type="password" class="form-control" id="wachtwoord">
+            </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn myButton" data-dismiss="modal">Login</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
