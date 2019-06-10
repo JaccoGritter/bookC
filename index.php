@@ -19,6 +19,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/bookC.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -30,11 +31,14 @@
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
-            <h2 class="text-center"><i class="fas fa-book"></i><a href="main.php">&nbsp;bookC</a></h2><br>
+            <h2 class="text-center"><i class="fas fa-book"></i>&nbsp;bookC</h2><br>
             <h4 class="text-center"><a data-toggle="modal" href="#login">Log In</a></h4>
             <h5 class="text-center">Create Account</h5>
+            <div class="text-center text-warning" id="message"></div>
         </div>
+        
     </div>
+
 
     <!-- The Modal -->
 <div class="modal fade" id="login">
@@ -52,7 +56,7 @@
         <form>
         <div class="form-group">
                 <label for="naam">Naam</label>
-                <input type="text" class="form-control" id="titel">
+                <input type="text" class="form-control" id="naam">
             </div>
             <div class="form-group">
                 <label for="wachtwoord">Wachtwoord</label>
@@ -63,7 +67,7 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn myButton" data-dismiss="modal">Login</button>
+        <button type="button" class="btn myButton" data-dismiss="modal" id="loginButton">Login</button>
       </div>
 
     </div>
