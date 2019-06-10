@@ -8,6 +8,7 @@ $(document).ready(function(){
                 function(response){
                     let msg = "";
                     response = (JSON.parse(response));
+                    console.log("Naam: "+ response.naam);
                     if(response.loginok == true){
                         window.location = "main.php";
                     }else{

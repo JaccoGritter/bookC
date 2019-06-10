@@ -2,17 +2,25 @@
 
 $response = (object)[];    // instantiate empty object
 
-$naam = trim($_POST["naam"]);
-$wachtwoord = trim($_POST["wachtwoord"]);
+$response->naam = "";
+$response->loginok = false;
+$response->userid = "";
 
-if ($naam != "" && $wachtwoord != ""){
+if (file_exists ( 'data\users.json' )) {
+        $users = file_get_contents('data\users.json');
+        $users = json_decode($users);
 
-    if ($naam == "lotte" && $wachtwoord == "bookc") {
-        $response->naam = $naam;
-        $response->loginok = true;
-    } else {
-        $response->naam = $naam;
-        $response->loginok = false;
+    $naam = trim($_POST["naam"]);
+    $wachtwoord = trim($_POST["wachtwoord"]);
+    $founduserid = "";
+
+    foreach($users as $userid) {
+        if ($userid->naam == $naam && $userid->wachtwoord == $wachtwoord) {
+            $response->naam = $naam;
+            $response->loginok = true;
+            $response->userid = $userid;
+            $founduserid = $userid;
+        } 
     }
 
 }
