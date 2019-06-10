@@ -1,12 +1,12 @@
 {
     "id1" :
     {
-        "naam": "lotte",
+        "naam": "Lotte",
         "wachtwoord": "bookc"
     },
     "id2" :
     {
-        "naam": "jacco",
+        "naam": "Jacco",
         "wachtwoord": "bookj"
     }
 }

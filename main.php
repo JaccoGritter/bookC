@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +30,11 @@
 
 </head>
 <body>
-    
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
+
             <h2 class="text-center"><img src="/pics/bookclogo.png"></h2><br>
+            <h1 class="text-center"><?php echo $_SESSION["naam"]; ?></h1>
             <h4 class="text-center"><a href="addbook.php">Voeg boek toe</a></h4>
             <h5 class="text-center">Zoek</h5>
         </div>

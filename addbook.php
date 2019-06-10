@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/bookC.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -31,7 +35,7 @@
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto p-2">
         <div class="text-center"><img src="\pics\bookclogo.png"></div><br>
-            <form action="/action_page.php">
+            <form>
             <div class="form-group">
                 <label for="titel">Titel</label>
                 <input type="text" class="form-control" id="titel">
@@ -58,10 +62,35 @@
                 <textarea class="form-control" id="opmerkingen"></textarea>
             </div>
             <br/>
-            <button type="submit" class="btn myButton">Voeg toe</button>
+            <button type="button" class="btn myButton" id="addBookButton" data-toggle="modal" data-target="#succes">Voeg toe</button>
             </form>
         </div>
     </div>
+
+        <!-- The Modal -->
+    <div class="modal fade" id="succes">
+    <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">Succes</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="message"></div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn myButton" data-dismiss="modal">Sluit</button>
+        </div>
+
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

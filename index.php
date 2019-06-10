@@ -41,8 +41,8 @@
 
 
     <!-- The Modal -->
-<div class="modal fade" id="login">
-  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal fade" id="login">
+    <div class="modal-dialog  modal-dialog-centered">
     <div class="modal-content">
 
       <!-- Modal Header -->
@@ -56,11 +56,11 @@
         <form>
         <div class="form-group">
                 <label for="naam">Naam</label>
-                <input type="text" class="form-control" id="naam">
+                <input type="text" class="form-control" id="naam" autofocus required>
             </div>
             <div class="form-group">
                 <label for="wachtwoord">Wachtwoord</label>
-                <input type="password" class="form-control" id="wachtwoord">
+                <input type="password" class="form-control" id="wachtwoord" required>
             </div>
         </form>
       </div>

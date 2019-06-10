@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $response = (object)[];    // instantiate empty object
 
@@ -12,14 +13,14 @@ if (file_exists ( 'data\users.json' )) {
 
     $naam = trim($_POST["naam"]);
     $wachtwoord = trim($_POST["wachtwoord"]);
-    $founduserid = "";
+    // $founduserid = "";
 
     foreach($users as $userid) {
         if ($userid->naam == $naam && $userid->wachtwoord == $wachtwoord) {
-            $response->naam = $naam;
+            $response->naam = $_SESSION["naam"]= $naam;
+            $response->userid = $_SESSION["userid"] = $userid;
             $response->loginok = true;
-            $response->userid = $userid;
-            $founduserid = $userid;
+            // $founduserid = $userid;
         } 
     }
 
