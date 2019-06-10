@@ -1,4 +1,24 @@
 body {
     --my-bg-color: #47047a;
     --my-color: #fff;
+    --my-hover-color: #11021d;
+    --my-button-color: #08115c;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: var(--my-color);
+}
+
+a:hover, .myButton:hover {
+    color: var(--my-hover-color);
+    text-decoration: none;
+}
+
+.myButton {
+    background-color: var(--my-button-color);
+    color: var(--my-color);
 }
