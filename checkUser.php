@@ -17,8 +17,8 @@ if (file_exists ( 'data\users.json' )) {
 
     foreach($users as $userid) {
         if ($userid->naam == $naam && $userid->wachtwoord == $wachtwoord) {
-            $response->naam = $_SESSION["naam"]= $naam;
-            $response->userid = $_SESSION["userid"] = $userid;
+            $response->naam = $_SESSION["naam"]= $naam;                 // Store name and userid
+            $response->userid = $_SESSION["userid"] = $userid;          //  in SESSION variables
             $response->loginok = true;
             // $founduserid = $userid;
         } 
