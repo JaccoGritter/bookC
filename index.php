@@ -20,6 +20,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
     <title>BookC</title>
 
@@ -28,7 +30,7 @@
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
-            <h2 class="text-center">bookC</h2><br>
+            <h2 class="text-center"><i class="fas fa-book"></i><a href="main.php">&nbsp;bookC</a></h2><br>
             <h4 class="text-center">Log In</h4>
             <h5 class="text-center">Create Account</h5>
         </div>
