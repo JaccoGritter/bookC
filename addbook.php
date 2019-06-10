@@ -30,7 +30,7 @@
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto p-2">
-        <h2 class="text-center"><i class="fas fa-book"></i>&nbsp;bookC</h2><br>
+        <div class="text-center"><img src="\pics\bookclogo.png"></div><br>
             <form action="/action_page.php">
             <div class="form-group">
                 <label for="titel">Titel</label>

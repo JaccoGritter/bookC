@@ -30,7 +30,7 @@
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
-            <h2 class="text-center"><i class="fas fa-book"></i>&nbsp;bookC</h2><br>
+            <h2 class="text-center"><img src="/pics/bookclogo.png"></h2><br>
             <h4 class="text-center"><a href="addbook.php">Voeg boek toe</a></h4>
             <h5 class="text-center">Zoek</h5>
         </div>
