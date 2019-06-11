@@ -1,23 +1,14 @@
 <?php
 session_start();
+require "bookClass.php";
 
-// titel:titel, auteur:auteur, taal:taal, paginas:paginas, opmerkingen:opmerkingen
-$titel = $_POST["titel"];
-$auteur = $_POST["auteur"];
-$taal = $_POST["taal"];
-$paginas = $_POST["paginas"];
-$opmerkingen = $_POST["opmerkingen"];
-// dd();
-
-$book = $titel . "\n" . $auteur . "\n" . $taal . "\n" . $paginas . "\n" . $opmerkingen . "\n" . "e*n*d\n";
+$book = new Book($_POST["titel"], $_POST["auteur"], $_POST["taal"], $_POST["paginas"], $_POST["opmerkingen"]);
 
 $userid = $_SESSION['userid'];
-$bookfile = "data\books".$userid->id.".txt";
+$bookfile = "data\books".$userid->id.".json";
 
-//if (!file_exists ($bookfile)) 
-
-$myfile = fopen($bookfile, "a") or die("Unable to open file!");
-fwrite($myfile, $book);
+$myfile = fopen($bookfile, "a") or die("Kan de file niet openen!");
+fwrite($myfile, json_encode($book));
 fclose($myfile);
 
-echo $titel;
+echo $book->get_titel();

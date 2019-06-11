@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 $response = (object)[];    // instantiate empty object
 
 $response->naam = "";

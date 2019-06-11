@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- My own CSS -->
-    <link rel="stylesheet" href="/css/bookC.css">
+    <link rel="stylesheet" href="css/bookC.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -31,7 +31,7 @@
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">
         <div class="container border border-light rounded my-auto">
-            <div class="text-center"><img src="/pics/bookclogo.png"></div><br>
+            <div class="text-center"><img src="pics/bookclogo.png"></div><br>
             <h4 class="text-center"><a data-toggle="modal" href="#login">Log In</a></h4>
             <h5 class="text-center">Create Account</h5>
             <div class="text-center text-warning" id="message"></div>
