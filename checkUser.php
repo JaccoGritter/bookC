@@ -24,8 +24,8 @@ function initializeBooksFile($user) {
 }
 
 if (file_exists ( 'data\users.json' )) {
-        $users = file_get_contents('data\users.json');
-        $users = json_decode($users);
+    $users = file_get_contents('data\users.json');
+    $users = json_decode($users);
 
     $naam = trim($_POST["naam"]);
     $wachtwoord = trim($_POST["wachtwoord"]);
