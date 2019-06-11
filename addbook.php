@@ -1,5 +1,6 @@
 <?php
 session_start();
+require "bookClass.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +31,7 @@ session_start();
     <title>BookC toevoegen</title>
 
 </head>
+
 <body>
     
     <div style="height: 100vh; background-color: var(--my-bg-color); color: var(--my-color)" class= "d-flex align-content-center px-2">

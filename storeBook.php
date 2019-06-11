@@ -1,14 +1,19 @@
 <?php
+
+require "bookClass.php";    //  load class before session_start to prevent PHP_Incomplete_Class_Name error
 session_start();
-require "bookClass.php";
+
 
 $book = new Book($_POST["titel"], $_POST["auteur"], $_POST["taal"], $_POST["paginas"], $_POST["opmerkingen"]);
 
-$userid = $_SESSION['userid'];
-$bookfile = "data\books".$userid->id.".json";
+array_push($_SESSION["books"], $book);
 
-$myfile = fopen($bookfile, "a") or die("Kan de file niet openen!");
-fwrite($myfile, json_encode($book));
+$userid = $_SESSION['userid'];
+$bookfile = $_SESSION['bookfile'];
+$books = $_SESSION['books'];
+
+$myfile = fopen($bookfile, "w") or die("Kan de file niet openen!");
+fwrite($myfile, json_encode($books));
 fclose($myfile);
 
 echo $book->get_titel();

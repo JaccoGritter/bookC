@@ -1,5 +1,6 @@
 <?php
 session_start();
+require "bookClass.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +35,8 @@ session_start();
         <div class="container border border-light rounded my-auto">
 
             <h2 class="text-center"><img src="pics/bookclogo.png"></h2><br>
-            <h1 class="text-center"><?php echo $_SESSION["naam"]; ?></h1>
-            <h4 class="text-center"><a href="addbook.php">Voeg boek toe</a></h4>
+            <h2 class="text-center">Gebruiker:&nbsp;<?php echo $_SESSION["naam"]; ?></h2>
+            <h5 class="text-center"><a href="addbook.php">Voeg boek toe</a></h4>
             <h5 class="text-center">Zoek</h5>
         </div>
     </div>
