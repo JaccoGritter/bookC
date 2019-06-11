@@ -35,15 +35,13 @@ $(document).ready(function(){
             $.post('storeBook.php', {titel:titel, auteur:auteur, taal:taal, paginas:paginas, opmerkingen:opmerkingen},
                 function(response){
                     let msg = response + " is toegevoegd.";
-                    //response = (JSON.parse(response));
-                    //console.log("Naam: "+ response + " is toegevoegd");
-                    // if(response.loginok == true){
-                    //     window.location = "main.php";
-                    // }else{
-                    //     msg = "Ongeldige gebruikersnaam of wachtwoord!";
-                    // }
                     $("#message").html(msg);
                 });
+            $("#titel").val("");
+            $("#auteur").val("");
+            $("#taal").val("");
+            $("#paginas").val("");
+            $("#opmerkingen").val("");
         }
     });
 
