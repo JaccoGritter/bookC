@@ -16,4 +16,4 @@ $myfile = fopen($bookfile, "w") or die("Kan de file niet openen!");
 fwrite($myfile, json_encode($books));
 fclose($myfile);
 
-echo $book->get_titel();
+echo $book->titel;
