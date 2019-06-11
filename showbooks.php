@@ -1,6 +1,7 @@
 <?php
-session_start();
 require "bookClass.php";
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +37,17 @@ require "bookClass.php";
 
             <h5 class="text-right"><small>Gebruiker:&nbsp;<?php echo $_SESSION["naam"]; ?></small></h5>
             <h2 class="text-center"><img src="pics/bookclogo.png"></h2><br>
-            <!-- <h2 class="text-center">Gebruiker:&nbsp;<?php echo $_SESSION["naam"]; ?></h2> -->
-            <h5 class="text-center"><a href="addbook.php">Voeg boek toe</a></h5>
-            <h5 class="text-center"><a href="showbooks.php">Boekenlijst</a></h5>
+            <?php
+                echo '<ul class="list-unstyled text-center">';
+                $books = $_SESSION['books'];
+               //var_dump($books);
+                for ($i = 0; $i < count($books); $i++) {
+                    echo "<li>" .$books[$i]->titel . " - " . $books[$i]->auteur . "</li>";
+                }
+                echo "</ul>";
+                
+            ?>
+            <h5 class="text-center"><a href="main.php">home</a></h5>
         </div>
     </div>
 
