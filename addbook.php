@@ -1,6 +1,5 @@
 <?php
 session_start();
-require "bookClass.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +64,7 @@ require "bookClass.php";
             </div>
             <br/>
             <button type="button" class="btn myButton" id="addBookButton" data-toggle="modal" data-target="#succes">Voeg toe</button>
+            <button type="button" class="btn myButton"><a href="main.php">Home</a></button>
             </form>
         </div>
     </div>
